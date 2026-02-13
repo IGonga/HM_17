@@ -11,19 +11,9 @@ public class Flee : IBehavior
         _movement = movement;
     }
 
-    public void Enter()
-    {
-        Debug.Log("Вхожу в состояние - Flee");
-    }
-
     public void Execute()
     {
         StartFlee();
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Выхожу из состояния - Flee");
     }
 
     private void StartFlee()

@@ -16,19 +16,9 @@ public class Patrol : IBehavior
         _targets = targets;
     }
 
-    public void Enter()
-    {
-        Debug.Log("Вхожу в состояние - Patrol");
-    }
-
     public void Execute()
     {
         StartPatrol();
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Выхожу из состояния - Patrol");
     }
 
     private void StartPatrol()

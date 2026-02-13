@@ -11,19 +11,9 @@ public class Chase : IBehavior
         _movement = movement;
     }
 
-    public void Enter()
-    {
-        Debug.Log("Вхожу в состояние - Chase");
-    }
-
     public void Execute()
     {
         StartChase();
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Выхожу из состояния - Chase");
     }
 
     private void StartChase()

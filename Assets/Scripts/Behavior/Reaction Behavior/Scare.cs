@@ -11,20 +11,10 @@ public class Scare : IBehavior
         _deathEffect = deathEffect;
     }
 
-    public void Enter()
-    {
-        Debug.Log("Вхожу в состояние - Scare");
-    }
-
     public void Execute()
     {
         Debug.Log("< Умер от испуга >");
         Die();
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Выхожу из состояния - Scare");
     }
 
     public void Die()

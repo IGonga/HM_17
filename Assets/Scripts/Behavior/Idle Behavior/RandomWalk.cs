@@ -13,11 +13,6 @@ public class RandomWalk : IBehavior
         _movement = movement;
     }
 
-    public void Enter()
-    {
-        Debug.Log("Вхожу в состояние - RandomWalk");
-    }
-
     public void Execute()
     {
         if (_currentTime < _zero)
@@ -30,10 +25,5 @@ public class RandomWalk : IBehavior
         _movement.Move(randomDirection, _movement.MoveSpeed);
 
         _currentTime -= Time.fixedDeltaTime;
-    }
-
-    public void Exit()
-    {
-        Debug.Log("Выхожу из состояния - RandomWalk");
     }
 }
