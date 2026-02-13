@@ -367,6 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3086838925425542755, guid: 3683a7b13f96da84a872d4a3429c0183, type: 3}
+  _deathEffectPrefab: {fileID: 904780062817760009, guid: 478fb487da7fd3a4cbb0df380957bcf0, type: 3}
   _spawnPoint: {fileID: 5040274265586597969}
   _idleBehaviorTypes: 0
   _reactionBehaviorTipes: 0

@@ -3,7 +3,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyDetector _detector;
-    [SerializeField] private ParticleSystem _deathEffect;
 
     private IBehavior _idleBehavior;
     private IBehavior _reactionBehavior;
@@ -20,13 +19,5 @@ public class Enemy : MonoBehaviour
     {
         _idleBehavior = idleBehavior;
         _reactionBehavior = reactionBehavior;
-    }
-
-    public void Die()
-    {
-        _deathEffect.Play();
-        _deathEffect.transform.parent = null;
-
-        Destroy(gameObject);
     }
 }

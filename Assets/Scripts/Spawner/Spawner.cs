@@ -4,6 +4,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private IdleBehaviorTypes _idleBehaviorTypes;
     [SerializeField] private ReactionBehaviorTypes _reactionBehaviorTipes;
@@ -13,15 +14,15 @@ public class Spawner : MonoBehaviour
     private Enemy _enemy;
     private Movement _movement;
     private EnemyDetector _enemyDetector;
+    private ParticleSystem _deathEffect;
     private IBehavior _idleBehavior;
     private IBehavior _reactionBehavior;
-
 
     private void Start()
     {
         _enemy = Instantiate(_enemyPrefab, _spawnPoint);
         _movement = _enemy.GetComponent<Movement>();
-        _enemyDetector= _enemy.GetComponentInChildren<EnemyDetector>();
+        _enemyDetector = _enemy.GetComponentInChildren<EnemyDetector>();
 
         StateIdle(_idleBehaviorTypes);
         StateReaction(_reactionBehaviorTipes);
@@ -61,7 +62,10 @@ public class Spawner : MonoBehaviour
                 _reactionBehavior = new Chase(_enemyDetector, _movement);
                 break;
             case ReactionBehaviorTypes.Scare:
-                _reactionBehavior = new Scare(_enemy);
+                _deathEffect = Instantiate(_deathEffectPrefab, _enemy.transform);
+                _deathEffect.transform.parent.SetParent(_enemy.transform);
+
+                _reactionBehavior = new Scare(_enemy, _deathEffect);
                 break;
             default:
                 Debug.Log("Такое состояние не поддерживается!");
