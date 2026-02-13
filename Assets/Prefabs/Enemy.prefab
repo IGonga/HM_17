@@ -5078,6 +5078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2612f06693f18d43841af049d30164b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _detector: {fileID: 5104332656652679539}
   _deathEffect: {fileID: 1412229963103946432}
 --- !u!114 &5822360849662060364
 MonoBehaviour:
@@ -5091,6 +5092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193e24c1fe95d504bbf1f078d19edb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moveSpeed: 4
+  _rotateSpeed: 750
 --- !u!1 &3555956195029127166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,6 +5104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 942164948176197618}
   - component: {fileID: 3757443117210961822}
+  - component: {fileID: 5104332656652679539}
   m_Layer: 0
   m_Name: AggroZone
   m_TagString: Untagged
@@ -5144,3 +5148,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5104332656652679539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555956195029127166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b302adb73eea1e94c87bb133789c8ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

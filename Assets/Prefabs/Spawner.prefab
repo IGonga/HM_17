@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7201487624347409540}
   - component: {fileID: 4802500145871815143}
   - component: {fileID: 8750642361405573131}
-  - component: {fileID: 656129788765265644}
+  - component: {fileID: 8778182280395396331}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -354,7 +354,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9283767, y: 0.09411625, z: 2.859941}
   m_Center: {x: 1.4641886, y: 0.047058124, z: 1.4299703}
---- !u!114 &656129788765265644
+--- !u!114 &8778182280395396331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,9 +367,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 3086838925425542755, guid: 3683a7b13f96da84a872d4a3429c0183, type: 3}
+  _spawnPoint: {fileID: 5040274265586597969}
   _idleBehaviorTypes: 0
   _reactionBehaviorTipes: 0
-  _spawnPoint: {fileID: 5040274265586597969}
+  _patrolPoints: []
 --- !u!1 &8384848611181881651
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5040274265586597969}
-  - component: {fileID: 6998882473185861217}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -402,15 +402,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8893483395653565243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6998882473185861217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8384848611181881651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c22b28c7ac3d8346a3d0219658cea89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

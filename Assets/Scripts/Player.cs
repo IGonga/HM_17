@@ -5,9 +5,6 @@ public class Player : MonoBehaviour
     private const string HorizontalAxie = "Horizontal";
     private const string VerticalAxie = "Vertical";
 
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
-
     private Movement _movement;
     private Vector3 _direction;
 
@@ -19,11 +16,8 @@ public class Player : MonoBehaviour
     private void Update()
     {
         _direction = new Vector3(Input.GetAxis(HorizontalAxie), 0, Input.GetAxis(VerticalAxie));
-    }
 
-    private void FixedUpdate()
-    {
-        _movement.Move(_direction, _moveSpeed);
-        _movement.Rotate(_direction, _rotateSpeed);
+        _movement.Move(_direction, _movement.MoveSpeed);
+        _movement.Rotate(_direction, _movement.RotateSpeed);
     }
 }
